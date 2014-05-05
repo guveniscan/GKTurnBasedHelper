@@ -46,7 +46,8 @@
 
 //Calls load player for identifier for resigned player if there are any, and allows
 //further handling after retrieval via complationBlock
-+(void) retrieveResignedParticipantInMatch:(GKTurnBasedMatch *) match;
++(void) retrieveResignedParticipantInMatch:(GKTurnBasedMatch *) match
+                           completionBlock:(void (^)(NSArray *players, NSError *error)) completion;
 
 //Checks if there any participants with match outcome 'quit' in the match
 +(BOOL) hasAnyParticipantResignedFromMatch:(GKTurnBasedMatch *) match;
